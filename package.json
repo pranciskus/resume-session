@@ -1,0 +1,57 @@
+{
+  "name": "@pranciskusj/resume-session",
+  "version": "0.5.3",
+  "description": "Continue sessions with a different account or coding agent, including saved subagent work. Supports Claude, Codex, Gemini and OpenCode.",
+  "type": "module",
+  "bin": {
+    "resume": "bin/resume.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.17.0"
+  },
+  "scripts": {
+    "test": "node --test",
+    "test:package": "node scripts/check-package.mjs",
+    "check": "npm run format:check && node scripts/check-syntax.mjs",
+    "format": "prettier --write \"{bin,src,scripts,test}/**/*.{js,mjs}\" \"*.json\" \".github/workflows/*.yml\" \".prettierrc.json\"",
+    "format:check": "prettier --check \"{bin,src,scripts,test}/**/*.{js,mjs}\" \"*.json\" \".github/workflows/*.yml\" \".prettierrc.json\""
+  },
+  "dependencies": {
+    "@clack/prompts": "1.0.1",
+    "continues": "4.1.1",
+    "cross-spawn": "7.0.6",
+    "shell-quote": "1.12.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranciskus/resume-session.git"
+  },
+  "homepage": "https://github.com/pranciskus/resume-session#readme",
+  "bugs": {
+    "url": "https://github.com/pranciskus/resume-session/issues"
+  },
+  "keywords": [
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cli",
+    "session",
+    "resume",
+    "handoff",
+    "agents"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "prettier": "3.9.10"
+  }
+}
